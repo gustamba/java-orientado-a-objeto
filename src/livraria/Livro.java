@@ -33,9 +33,10 @@ public class Livro {
 	}
 
 	public boolean aplicaDescontoDe(double porcentagem) {
-		if (porcentagem > 0.3 ) {
+		if (porcentagem > 0.4 ) {
 			return false;
 		}
+		System.out.println("aplicando desconto no Livro");
 		this.valor -= this.valor * porcentagem;
 		return true;
 	}
@@ -79,6 +80,4 @@ public class Livro {
 	public void setAutor(Autor autor) {
 		this.autor = autor;
 	}
-
-
 }
