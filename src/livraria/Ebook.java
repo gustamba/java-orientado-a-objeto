@@ -15,7 +15,7 @@ public class Ebook extends Livro{
         }
         System.out.println("aplicando desconto no Ebook");
         this.valor -= this.valor * porcentagem;
-        return super.aplicaDescontoDe(porcentagem);
+        return true;
         }
 
     public void setWaterMark(String waterMark) {

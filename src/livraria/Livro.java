@@ -1,6 +1,6 @@
 package livraria;
 
-public class Livro {
+public abstract class Livro {
 	private String nome;
 	private String descricao;
 	protected double valor;
@@ -37,7 +37,7 @@ public class Livro {
 			return false;
 		}
 		System.out.println("aplicando desconto no Livro");
-		this.valor -= this.valor * porcentagem;
+		this.valor -= this.valor * porcentagem;	
 		return true;
 	}
 	
