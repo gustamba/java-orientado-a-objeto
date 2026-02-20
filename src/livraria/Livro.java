@@ -1,18 +1,19 @@
 package livraria;
 
 public abstract class Livro {
+
 	private String nome;
 	private String descricao;
-	protected double valor;
+	private double valor;
 	private String isbn;
 	private Autor autor;
-	private boolean impresso;
 
 	public Livro(Autor autor) {
 		this.autor = autor;
 		this.isbn = "000-00-00000-00-0";
-		this.impresso = true;
 	}
+
+	public abstract boolean aplicaDescontoDe(double porcentagem);
 
 	void mostrarDetalhes() {
 		System.out.println("Mostrando detalhes do livro ");
@@ -30,15 +31,6 @@ public abstract class Livro {
 
 	boolean temAutor(){
 		return this.autor != null;
-	}
-
-	public boolean aplicaDescontoDe(double porcentagem) {
-		if (porcentagem > 0.4 ) {
-			return false;
-		}
-		System.out.println("aplicando desconto no Livro");
-		this.valor -= this.valor * porcentagem;	
-		return true;
 	}
 	
 	double getValor() {
