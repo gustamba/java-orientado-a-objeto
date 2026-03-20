@@ -26,4 +26,10 @@ public class Ebook extends Livro{
     public String getWaterMark() {
         return waterMark;
     }
+
+    @Override
+    public double getValor() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getValor'");
+    }
 }

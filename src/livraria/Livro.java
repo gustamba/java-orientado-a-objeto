@@ -1,6 +1,6 @@
 package livraria;
 
-public abstract class Livro {
+public abstract class Livro implements Produto {
 
 	private String nome;
 	private String descricao;
@@ -32,8 +32,8 @@ public abstract class Livro {
 	boolean temAutor(){
 		return this.autor != null;
 	}
-	
-	double getValor() {
+
+	public Double getvalor() {
 		return valor;
 	}
 
