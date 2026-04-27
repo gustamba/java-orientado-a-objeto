@@ -1,5 +1,5 @@
 package livraria;
-public class LivroFisico extends Livro{
+public class LivroFisico extends Livro implements Promocional{
 
     private double valor;
 

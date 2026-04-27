@@ -1,8 +1,18 @@
 package livraria;
 
-public class Ebook extends Livro{
+public class Ebook extends Livro implements Promocional {
    
+    private double valor;
+
     private String waterMark;
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public double getValor() {
+        return valor;
+    }
 
     public Ebook(Autor autor) {
         super(autor);
@@ -27,9 +37,4 @@ public class Ebook extends Livro{
         return waterMark;
     }
 
-    @Override
-    public double getValor() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getValor'");
-    }
 }
