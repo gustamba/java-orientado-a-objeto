@@ -40,7 +40,7 @@ public class NomeClasse {
 ```
 
 ## Atalhos - Ctrl + Espaço
-Ctrl + Espaço - Completa código(main, syso)
+Ctrl + Espaço - Completa código(main, syso)  
 Ctrl + F11 - Executa código 
 
 
@@ -109,3 +109,39 @@ void mostrarDetalhes() {
     System.out.println(isbn);
 }
 ```
+
+## Atibuto de classe
+this
+
+## Método com retorno
+```java
+boolean temAutor(){
+    return this.autor != null;
+}
+```
+
+## Encapsulamento
+Esconder todos os atributos de suas classes (deixado-os private) e encapsular seus comportamentos em métodos
+
+Getters e Setters
+```java
+public class Livro{
+    private double valor;
+    // demais atributos e métodos
+
+    public double getValor(){
+        return valor;
+    }
+
+    public void setValor(double valor){
+        this.valor = valor;
+    }
+}
+```
+No eclipse  
+Ctrl + 3 -> ggas (Generate Getters and Setters) -> Finish
+
+## Herança e Plimorfismo
+
+@Override
+Anotação de que um método foi reescrito referente a classe pai (superclasse) 
