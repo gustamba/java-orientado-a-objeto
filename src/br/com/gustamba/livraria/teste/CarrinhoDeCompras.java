@@ -5,7 +5,8 @@ import br.com.gustamba.livraria.produtos.Produto;
 
 public class CarrinhoDeCompras {
     
-    private double total = 0.0;
+    private double total;
+    private Produto[] produtos = new Produto[10];
 
     public void adiciona(Livro livro) {
         System.out.println("Adicionando: " + livro);
