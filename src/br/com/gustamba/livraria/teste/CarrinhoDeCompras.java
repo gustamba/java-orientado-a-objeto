@@ -7,19 +7,26 @@ public class CarrinhoDeCompras {
     
     private double total;
     private Produto[] produtos = new Produto[10];
-
-    public void adiciona(Livro livro) {
-        System.out.println("Adicionando: " + livro);
-        //livro.aplicaDescontoDe(0.15);
-        total += livro.getValor();
-    }
+    private int contador = 0;
+    
+//    public void adiciona(Livro livro) {
+//        System.out.println("Adicionando: " + livro);
+//        //livro.aplicaDescontoDe(0.15);
+//        total += livro.getValor();
+//    }
 
     public void adiciona(Produto produto) {
         System.out.println("Adicionando: " + produto);
-        total += produto.getValor();
+        this.produtos[contador] = produto;
+        contador ++;
+        this.total += produto.getValor();
     }
 
     public double getTotal() {
         return total;
+    }
+
+    public Produto[] getProdutos() {
+        return produtos;
     }
 }

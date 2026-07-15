@@ -3,6 +3,7 @@ package br.com.gustamba.livraria.teste;
 import br.com.gustamba.livraria.Autor;
 import br.com.gustamba.livraria.produtos.Ebook;
 import br.com.gustamba.livraria.produtos.LivroFisico;
+import br.com.gustamba.livraria.produtos.Produto;
 
 public class RegistroDeVendas {
     public static void main(String[] args) {
@@ -28,5 +29,17 @@ public class RegistroDeVendas {
         carrinho.adiciona(ebook);
 
         System.out.println("Total " + carrinho.getTotal());
+        
+        Produto[] produtos = carrinho.getProdutos();
+        
+        // enhanced-for:
+        // for (Produto produto : produtos){}
+        for (int i = 0; i <= produtos.length; i++) {
+        	Produto produto = produtos[i];
+        	if (produto != null) {
+        		System.out.println(produto.getValor());
+        	}
+        }
+        
     }
 }
